@@ -55,11 +55,7 @@ server.use('/api',orderRoutes);
 
 
 
-server.get('/user',(req,res)=>{
-    res.json({
-        user:"Rohit"
-    })
-})
+
 
 
 
@@ -73,13 +69,13 @@ if ( process.env.NODE_ENV == "production"){
 
     
 
-    // const path = require("path");
+    const path = require("path");
 
-    // app.get("*", (req, res) => {
+    app.get("*", (req, res) => {
 
-    //     res.sendFile(path.resolve(__dirname, 'ecommerce-frontend', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'ecommerce-frontend', 'build', 'index.html'));
 
-    // })
+    })
 
 
 }
